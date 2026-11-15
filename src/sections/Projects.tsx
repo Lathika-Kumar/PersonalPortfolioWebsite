@@ -122,25 +122,28 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   View Details
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </button>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-1"
-                    aria-label={`${project.title} GitHub Source`}
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 dark:text-slate-350 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors"
+                    aria-label={`${project.title} GitHub Source Code`}
+                    title="View Source on GitHub"
                   >
-                    <Github className="h-4.5 w-4.5" />
+                    <Github className="h-3.5 w-3.5" />
+                    <span>Code</span>
                   </a>
                   {project.liveDemo && (
                     <a
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors p-1"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 transition-colors"
                       aria-label={`${project.title} Live Demo`}
                     >
-                      <ExternalLink className="h-4.5 w-4.5" />
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      <span>Live</span>
                     </a>
                   )}
                 </div>

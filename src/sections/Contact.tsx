@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { SectionHeading } from "../components/SectionHeading";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, CheckCircle2, AlertTriangle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle2, AlertTriangle } from "lucide-react";
 import { contactDetails, socialLinks } from "../data/socialLinks";
+import { SocialPlatformIcon } from "../components/SocialIcons";
 
 export const Contact = () => {
   const [form, setForm] = useState({
@@ -110,17 +111,6 @@ export const Contact = () => {
     }
   };
 
-  const getSocialIcon = (platform: string) => {
-    switch (platform) {
-      case "GitHub":
-        return <Github className="h-5 w-5" />;
-      case "LinkedIn":
-        return <Linkedin className="h-5 w-5" />;
-      default:
-        return null;
-    }
-  };
-
   return (
     <section
       id="contact"
@@ -190,21 +180,21 @@ export const Contact = () => {
             </div>
 
             {/* Social Links Row */}
-            <div className="flex gap-3 pt-6">
-              {socialLinks
-                .filter((link) => link.platform !== "LeetCode")
-                .map((link) => (
-                  <a
-                    key={link.platform}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 py-2 px-4 rounded-xl text-xs font-bold bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-850 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition-colors shadow-sm"
-                  >
-                    {getSocialIcon(link.platform)}
-                    {link.platform}
-                  </a>
-                ))}
+            <div className="flex flex-wrap gap-2.5 pt-6">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.platform}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 py-2 px-3.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-850 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors shadow-sm"
+                  aria-label={`${link.platform} Profile`}
+                  title={`${link.platform} - ${link.label}`}
+                >
+                  <SocialPlatformIcon platform={link.platform} className="h-4 w-4" />
+                  <span>{link.platform}</span>
+                </a>
+              ))}
             </div>
           </div>
 

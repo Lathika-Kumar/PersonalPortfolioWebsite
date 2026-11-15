@@ -1,34 +1,35 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Download, Eye, Github, Linkedin, Terminal, Sparkles } from "lucide-react";
+import { ArrowRight, Download, Eye, Terminal, Sparkles, Trophy } from "lucide-react";
 import { profile } from "../data/profile";
 import { socialLinks } from "../data/socialLinks";
+import { SocialPlatformIcon } from "../components/SocialIcons";
+
+const terminalCommands = [
+  "> lathika.init()",
+  "Loading B.Tech AI & Data Science profile...",
+  "Karpagam College of Engineering (CGPA: 8.4/10)",
+  "> lathika.getLatestAchievement()",
+  "WINNER: 1st Place – VIT Mapathon (Geospatial Mapping Challenge)",
+  "> lathika.getCoreFocus()",
+  "['Artificial Intelligence', 'Machine Learning', 'Full-Stack & Backend', 'DSA']",
+  "> lathika.getLeetCodeStats()",
+  "Total Solved: 193 (130 Java, 63 Python3)",
+  "> lathika.runInferenceCheck()",
+  "Running MediaAuthenticity verification...",
+  "Integrity: Valid [SHA-256 Verified]",
+  "> _"
+];
 
 export const Hero: React.FC = () => {
   const [terminalText, setTerminalText] = useState<string[]>([]);
   const [terminalIndex, setTerminalIndex] = useState(0);
-
-  const terminalCommands = [
-    "> lathika.init()",
-    "Loading B.Tech AI & Data Science profile...",
-    "Karpagam College of Engineering (CGPA: 8.4/10)",
-    "> lathika.getSkills()",
-    "['Python', 'Java', 'React.js', 'FastAPI', 'PyTorch']",
-    "> lathika.getLeetCodeStats()",
-    "Total Solved: 193 (130 Java, 63 Python3)",
-    "> lathika.runModelEvaluator()",
-    "Running VehicleClassification inference...",
-    "Class: Ambulance [Confidence: 98.6%]",
-    "Running DeepfakeDetector...",
-    "Integrity: Valid [SHA-256 Verified]",
-    "> _"
-  ];
 
   useEffect(() => {
     if (terminalIndex < terminalCommands.length) {
       const timer = setTimeout(() => {
         setTerminalText((prev) => [...prev, terminalCommands[terminalIndex]]);
         setTerminalIndex((prev) => prev + 1);
-      }, terminalIndex === 0 ? 500 : terminalCommands[terminalIndex - 1].startsWith(">") ? 1000 : 400);
+      }, terminalIndex === 0 ? 500 : terminalCommands[terminalIndex - 1].startsWith(">") ? 900 : 350);
       return () => clearTimeout(timer);
     }
   }, [terminalIndex]);
@@ -49,28 +50,6 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const getSocialIcon = (platform: string) => {
-    switch (platform) {
-      case "GitHub":
-        return <Github className="h-5 w-5" />;
-      case "LinkedIn":
-        return <Linkedin className="h-5 w-5" />;
-      case "LeetCode":
-        return (
-          <svg
-            viewBox="0 0 24 24"
-            className="h-5 w-5 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M16.102 17.93l-2.69 2.607c-.466.451-1.111.696-1.744.696a2.285 2.285 0 0 1-1.743-.696L3.648 14.3a2.453 2.453 0 0 1-.744-1.768c0-.68.258-1.349.744-1.8l5.074-4.887c.451-.434 1.173-.42 1.61.031a1.083 1.083 0 0 1-.03 1.583L5.32 12.247c-.207.2-.207.53 0 .73l6.275 6.042c.2.193.53.193.73 0l2.196-2.127a1.084 1.084 0 0 1 1.583.03 1.127 1.127 0 0 1-.002 1.608zm5.253-5.263l-2.015 1.954a1.083 1.083 0 0 1-1.58-.031 1.128 1.128 0 0 1 .03-1.584l2.008-1.947c.2-.193.2-.53 0-.73l-6.276-6.042c-.2-.193-.53-.193-.73 0L7.6 10.366a1.128 1.128 0 0 1-1.584-.03 1.083 1.083 0 0 1 .03-1.58l5.215-5.04c.465-.45 1.112-.696 1.745-.696.632 0 1.277.246 1.743.696l6.276 6.042c.983.948.983 2.502.002 3.45z" />
-            <path d="M12.43 14.24a1.24 1.24 0 0 1-.87-.36l-2.27-2.23a1.25 1.25 0 0 1 0-1.76 1.24 1.24 0 0 1 1.75 0l2.27 2.23a1.25 1.25 0 0 1 0 1.76 1.24 1.24 0 0 1-.88.36z" />
-          </svg>
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
     <section
       id="home"
@@ -84,12 +63,21 @@ export const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Main Info Columns */}
           <div className="lg:col-span-7 text-left space-y-6">
-            {/* Header Badge */}
-            <div className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full border border-indigo-200/50 dark:border-indigo-900/50 bg-indigo-50/50 dark:bg-indigo-950/20 text-indigo-700 dark:text-indigo-300">
-              <Sparkles className="h-4 w-4 text-indigo-500" />
-              <span className="text-xs font-semibold tracking-wider uppercase">
-                AI & Data Science Student
-              </span>
+            {/* Header Badges */}
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full border border-indigo-200/50 dark:border-indigo-900/50 bg-indigo-50/50 dark:bg-indigo-950/20 text-indigo-700 dark:text-indigo-300">
+                <Sparkles className="h-3.5 w-3.5 text-indigo-500" />
+                <span className="text-xs font-semibold tracking-wider uppercase">
+                  B.Tech – AI & Data Science
+                </span>
+              </div>
+              <button
+                onClick={() => handleScrollTo("achievements")}
+                className="inline-flex items-center gap-1.5 py-1 px-3 rounded-full border border-amber-300/60 dark:border-amber-700/60 bg-amber-50 dark:bg-amber-950/30 text-amber-800 dark:text-amber-300 hover:scale-105 transition-transform cursor-pointer text-xs font-semibold"
+              >
+                <Trophy className="h-3.5 w-3.5 text-amber-500" />
+                <span>1st Place – VIT Mapathon</span>
+              </button>
             </div>
 
             {/* Name and Professional Titles */}
@@ -105,7 +93,7 @@ export const Hero: React.FC = () => {
             {/* Factual description */}
             <p className="text-slate-650 dark:text-slate-350 text-base md:text-lg max-w-2xl leading-relaxed">
               B.Tech Artificial Intelligence and Data Science student at Karpagam College of Engineering. 
-              Developing software products, machine learning models, and real-world AI applications. Committed to mastering core Data Structures & Algorithms.
+              Engineering machine learning pipelines, full-stack web applications, and backend services with practical AI development tools. Passionate about data analytics and mastering Data Structures & Algorithms.
             </p>
 
             {/* Resume and CTA Button Grid */}
@@ -142,9 +130,9 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Social profiles row */}
-            <div className="flex items-center gap-4 pt-4 border-t border-slate-200/60 dark:border-slate-850/60 max-w-sm">
-              <span className="text-xs font-semibold tracking-wider text-slate-400 dark:text-slate-500 uppercase">
-                Find me on:
+            <div className="flex items-center gap-3 pt-4 border-t border-slate-200/60 dark:border-slate-850/60 max-w-sm">
+              <span className="text-xs font-semibold tracking-wider text-slate-400 dark:text-slate-500 uppercase mr-1">
+                Profiles:
               </span>
               {socialLinks.map((link) => (
                 <a
@@ -152,10 +140,11 @@ export const Hero: React.FC = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-500 hover:text-indigo-650 dark:text-slate-400 dark:hover:text-indigo-400 transition-colors p-1.5 rounded-lg hover:bg-slate-150 dark:hover:bg-slate-900"
-                  aria-label={link.platform}
+                  className="text-slate-500 hover:text-indigo-650 dark:text-slate-400 dark:hover:text-indigo-400 transition-colors p-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-850 border border-transparent hover:border-slate-200 dark:hover:border-slate-800"
+                  aria-label={`${link.platform} Profile`}
+                  title={`${link.platform} - ${link.label}`}
                 >
-                  {getSocialIcon(link.platform)}
+                  <SocialPlatformIcon platform={link.platform} className="h-5 w-5" />
                 </a>
               ))}
             </div>
@@ -182,7 +171,11 @@ export const Hero: React.FC = () => {
               <div className="p-4 md:p-6 min-h-[300px] max-h-[360px] overflow-y-auto space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
                 {terminalText.map((cmd, i) => {
                   const isCommand = cmd.startsWith(">");
-                  const isSuccess = cmd.includes("Success") || cmd.includes("Inference completed") || cmd.includes("Total Solved:");
+                  const isSuccess =
+                    cmd.includes("WINNER") ||
+                    cmd.includes("1st Place") ||
+                    cmd.includes("Total Solved:") ||
+                    cmd.includes("Valid");
                   return (
                     <div 
                       key={i} 
@@ -190,7 +183,7 @@ export const Hero: React.FC = () => {
                         isCommand 
                           ? "text-indigo-650 dark:text-indigo-455 font-bold" 
                           : isSuccess 
-                            ? "text-emerald-600 dark:text-emerald-400" 
+                            ? "text-emerald-600 dark:text-emerald-400 font-semibold" 
                             : "text-slate-550 dark:text-slate-400"
                       }`}
                     >

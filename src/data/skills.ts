@@ -15,47 +15,55 @@ export const skillCategories: SkillCategory[] = [
       { name: "Python" },
       { name: "Java" },
       { name: "JavaScript" },
-      { name: "TypeScript" }
+      { name: "TypeScript" },
+      { name: "SQL" }
     ]
   },
   {
-    title: "AI / Machine Learning",
+    title: "AI & Machine Learning",
     skills: [
       { name: "Machine Learning" },
       { name: "Computer Vision" },
       { name: "Deep Learning" },
-      { name: "TensorFlow" },
       { name: "PyTorch" },
       { name: "OpenCV" },
       { name: "Scikit-learn" },
-      { name: "DeepFace" }
+      { name: "DeepFace" },
+      { name: "TensorFlow" }
     ]
   },
   {
-    title: "Frontend Development",
-    skills: [
-      { name: "React.js" },
-      { name: "Next.js" },
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "Tailwind CSS" }
-    ]
-  },
-  {
-    title: "Backend / Application Frameworks",
+    title: "Full-Stack & Backend",
     skills: [
       { name: "FastAPI" },
+      { name: "Node.js" },
+      { name: "Express" },
       { name: "Flask" },
-      { name: "Gradio" },
-      { name: "Streamlit" }
+      { name: "REST APIs" },
+      { name: "React.js" },
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "MongoDB" }
     ]
   },
   {
-    title: "Computer Science Core",
+    title: "Geospatial & Analytics",
+    skills: [
+      { name: "Geospatial Mapping" },
+      { name: "Spatial Data Analysis" },
+      { name: "Data Analytics" },
+      { name: "Pandas & NumPy" },
+      { name: "Matplotlib" }
+    ]
+  },
+  {
+    title: "CS Fundamentals & Tools",
     skills: [
       { name: "Data Structures & Algorithms" },
-      { name: "Problem Solving" },
-      { name: "Competitive Coding" }
+      { name: "Object-Oriented Programming (OOP)" },
+      { name: "Competitive Programming" },
+      { name: "Git & GitHub" },
+      { name: "AI-Powered Dev Tools" }
     ]
   }
 ];

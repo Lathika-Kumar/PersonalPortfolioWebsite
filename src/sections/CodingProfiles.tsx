@@ -1,5 +1,6 @@
 import { SectionHeading } from "../components/SectionHeading";
-import { ExternalLink, Award, BrainCircuit, Code, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Award, BrainCircuit, CheckCircle2 } from "lucide-react";
+import { LeetCodeIcon } from "../components/SocialIcons";
 
 export const CodingProfiles: React.FC = () => {
   const dsaTopics = [
@@ -37,7 +38,7 @@ export const CodingProfiles: React.FC = () => {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2">
                     <div className="p-2 rounded-xl bg-orange-500/10 dark:bg-orange-500/5 text-orange-600 dark:text-orange-400">
-                      <Code className="h-5 w-5" />
+                      <LeetCodeIcon className="h-5 w-5" />
                     </div>
                     <span className="font-bold text-slate-900 dark:text-white text-base">
                       LeetCode Profile

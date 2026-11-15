@@ -7,6 +7,7 @@ import { About } from "./sections/About";
 import { Skills } from "./sections/Skills";
 import { Projects } from "./sections/Projects";
 import { CodingProfiles } from "./sections/CodingProfiles";
+import { Achievements } from "./sections/Achievements";
 import { Education } from "./sections/Education";
 import { Certifications } from "./sections/Certifications";
 import { Contact } from "./sections/Contact";
@@ -42,6 +43,9 @@ function App() {
 
         {/* LeetCode & Coding Metrics */}
         <CodingProfiles />
+
+        {/* Honors & Major Achievements (VIT Mapathon 1st Place) */}
+        <Achievements />
 
         {/* Education Timeline */}
         <Education />

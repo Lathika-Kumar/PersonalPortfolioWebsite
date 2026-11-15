@@ -17,9 +17,10 @@ export const profile: Profile = {
   titles: [
     "AI & Data Science Student",
     "AI/ML & Software Developer",
+    "Full-Stack & Backend Engineer",
     "DSA & Problem Solver"
   ],
-  bio: "Motivated B.Tech Artificial Intelligence and Data Science student at Karpagam College of Engineering. Passionate about software development, machine learning, and full-stack technologies. Actively practicing Data Structures & Algorithms (DSA) and building real-world AI-driven applications to solve practical challenges.",
+  bio: "B.Tech Artificial Intelligence and Data Science undergraduate at Karpagam College of Engineering with an 8.4 CGPA. First Place Winner at VIT Mapathon. Passionate about machine learning, backend engineering, and building full-stack applications with AI-powered development tools. Dedicated to data analytics, competitive programming (190+ LeetCode problems solved), and solving real-world challenges through innovative software solutions.",
   location: "Cuddalore, Tamil Nadu, India",
   email: "lathikakumar798@gmail.com",
   phone: "+91 7904358845",
@@ -30,19 +31,19 @@ export const profile: Profile = {
       description: "Karpagam College of Engineering"
     },
     {
-      label: "LeetCode Problems",
-      value: 193,
+      label: "VIT Mapathon",
+      value: "1st Place",
+      description: "Geospatial Challenge Winner"
+    },
+    {
+      label: "LeetCode Solved",
+      value: "193+",
       description: "130 Java + 63 Python3 solved"
     },
     {
       label: "GitHub Repositories",
-      value: 30,
-      description: "Public repositories"
-    },
-    {
-      label: "LeetCode Badge",
-      value: "50 Days",
-      description: "Active coder badge (2026)"
+      value: "30",
+      description: "Public code repositories"
     }
   ]
 };

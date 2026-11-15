@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SectionHeading } from "../components/SectionHeading";
 import { skillCategories } from "../data/skills";
-import { Terminal, Code, Cpu, Globe, Database } from "lucide-react";
+import { Terminal, Code, Cpu, Globe, MapPin } from "lucide-react";
 
 export const Skills: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -15,7 +15,7 @@ export const Skills: React.FC = () => {
       case 2:
         return <Globe className="h-4 w-4" />;
       case 3:
-        return <Database className="h-4 w-4" />;
+        return <MapPin className="h-4 w-4" />;
       default:
         return <Terminal className="h-4 w-4" />;
     }
