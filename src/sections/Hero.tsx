@@ -63,12 +63,19 @@ export const Hero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Main Info Columns */}
           <div className="lg:col-span-7 text-left space-y-6">
-            {/* Header Badge */}
-            <div className="inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 shadow-xs">
-              <Sparkles className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
-              <span className="text-xs font-bold tracking-wider uppercase">
-                B.Tech – AI & Data Science
-              </span>
+            {/* Header Badge & Avatar */}
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/lathika-kumar.jpg"
+                alt="Lathika Kumar"
+                className="h-10 w-10 sm:h-11 sm:w-11 rounded-full object-cover object-top border-2 border-slate-300 dark:border-slate-700 shadow-xs"
+              />
+              <div className="inline-flex items-center gap-2 py-1.5 px-3.5 rounded-full border border-indigo-200 dark:border-indigo-900/60 bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 shadow-xs">
+                <Sparkles className="h-3.5 w-3.5 text-indigo-600 dark:text-indigo-400" />
+                <span className="text-xs font-bold tracking-wider uppercase">
+                  B.Tech – AI & Data Science
+                </span>
+              </div>
             </div>
 
             {/* Name and Professional Titles */}
