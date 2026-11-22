@@ -70,7 +70,7 @@ export const AchievementModal: React.FC<AchievementModalProps> = ({
               href={imageUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-xl text-slate-700 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white bg-white hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 shadow-xs transition-colors"
               title="Open full image in new tab"
             >
               <ExternalLink className="h-4 w-4" />
@@ -78,17 +78,17 @@ export const AchievementModal: React.FC<AchievementModalProps> = ({
             <a
               href={imageUrl}
               download
-              className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-xl text-slate-700 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white bg-white hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 shadow-xs transition-colors"
               title="Download image"
             >
               <Download className="h-4 w-4" />
             </a>
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-xl text-slate-700 hover:text-slate-950 dark:text-slate-300 dark:hover:text-white bg-white hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 shadow-xs transition-colors cursor-pointer"
               aria-label="Close dialog"
             >
-              <X className="h-5 w-5" />
+              <X className="h-4 w-4" />
             </button>
           </div>
         </div>

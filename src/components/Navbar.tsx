@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50 shadow-sm"
+          ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-xs"
           : "bg-transparent"
       }`}
     >
@@ -77,9 +77,9 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, "home")}
-              className="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
+              className="text-xl font-bold tracking-tight text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
-              Lathika<span className="text-indigo-650 dark:text-indigo-400">.K</span>
+              Lathika<span className="text-indigo-600 dark:text-indigo-400">.K</span>
             </a>
           </div>
 
@@ -92,13 +92,13 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
                 onClick={(e) => handleNavClick(e, item.id)}
                 className={`text-xs font-semibold tracking-wide transition-colors duration-200 relative py-1 ${
                   activeSection === item.id
-                    ? "text-indigo-650 dark:text-indigo-400"
+                    ? "text-indigo-600 dark:text-indigo-400"
                     : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-650 dark:bg-indigo-400 rounded-full" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600 dark:bg-indigo-400 rounded-full" />
                 )}
               </a>
             ))}
@@ -113,13 +113,13 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
                 onClick={(e) => handleNavClick(e, item.id)}
                 className={`text-2xs font-semibold transition-colors duration-200 relative py-1 ${
                   activeSection === item.id
-                    ? "text-indigo-650 dark:text-indigo-400"
+                    ? "text-indigo-600 dark:text-indigo-400"
                     : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 {item.id === "coding" ? "DSA" : item.id === "certifications" ? "Certs" : item.label}
                 {activeSection === item.id && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-650 dark:bg-indigo-400 rounded-full" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-600 dark:bg-indigo-400 rounded-full" />
                 )}
               </a>
             ))}
@@ -127,18 +127,18 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 
           {/* Right Side Buttons & Social Icons */}
           <div className="hidden lg:flex items-center space-x-3">
-            <div className="flex items-center space-x-2 border-r border-slate-200 dark:border-slate-800 pr-3">
+            <div className="flex items-center space-x-2 border-r border-slate-300 dark:border-slate-800 pr-3">
               {socialLinks.map((link) => (
                 <a
                   key={link.platform}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                  className="text-slate-700 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white transition-colors p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 shadow-xs"
                   aria-label={`${link.platform} Profile`}
                   title={`${link.platform} - ${link.label}`}
                 >
-                  <SocialPlatformIcon platform={link.platform} className="h-4.5 w-4.5" />
+                  <SocialPlatformIcon platform={link.platform} className="h-4 w-4" />
                 </a>
               ))}
             </div>
@@ -151,10 +151,10 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none cursor-pointer"
+              className="p-2 rounded-xl text-slate-800 dark:text-slate-200 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 focus:outline-none cursor-pointer"
               aria-label="Toggle navigation menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
@@ -174,8 +174,8 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               onClick={(e) => handleNavClick(e, item.id)}
               className={`block px-3 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                 activeSection === item.id
-                  ? "bg-indigo-50 dark:bg-indigo-950/50 text-indigo-650 dark:text-indigo-400 font-bold"
-                  : "text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white"
+                  ? "bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 font-bold"
+                  : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               {item.label}
@@ -188,7 +188,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-500 hover:text-indigo-650 dark:text-slate-400 dark:hover:text-indigo-400 transition-colors p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900"
+                className="text-slate-700 hover:text-indigo-600 dark:text-slate-300 dark:hover:text-white transition-colors p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 shadow-xs"
                 aria-label={`${link.platform} Profile`}
                 title={`${link.platform} - ${link.label}`}
               >

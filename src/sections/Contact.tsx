@@ -114,7 +114,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/40 border-t border-slate-200/40 dark:border-slate-800/40 transition-colors"
+      className="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800 transition-colors"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Let's Build Something Intelligent" subtitle="Get In Touch" />
@@ -125,23 +125,23 @@ export const Contact = () => {
             <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white">
               Connect With Me
             </h3>
-            <p className="text-slate-655 dark:text-slate-350 text-sm md:text-base leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-350 text-sm md:text-base leading-relaxed">
               If you are looking for an AI/ML or software development intern, or have any questions about my projects, feel free to reach out. I will get back to you as soon as possible.
             </p>
 
             <div className="space-y-4 pt-4">
               {/* Email */}
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-white dark:bg-slate-900 text-indigo-500 border border-slate-200/50 dark:border-slate-800 shadow-sm">
+                <div className="p-3 rounded-xl bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-300 dark:border-slate-700 shadow-sm">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                  <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
                     Email
                   </h4>
                   <a
                     href={`mailto:${contactDetails.email}`}
-                    className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors"
+                    className="text-sm font-semibold text-slate-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                   >
                     {contactDetails.email}
                   </a>
@@ -150,11 +150,11 @@ export const Contact = () => {
 
               {/* Phone */}
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-white dark:bg-slate-900 text-indigo-500 border border-slate-200/50 dark:border-slate-800 shadow-sm">
+                <div className="p-3 rounded-xl bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-300 dark:border-slate-700 shadow-sm">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                  <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
                     Phone
                   </h4>
                   <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
@@ -165,11 +165,11 @@ export const Contact = () => {
 
               {/* Location */}
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-white dark:bg-slate-900 text-indigo-500 border border-slate-200/50 dark:border-slate-800 shadow-sm">
+                <div className="p-3 rounded-xl bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-slate-300 dark:border-slate-700 shadow-sm">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                  <h4 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">
                     Location
                   </h4>
                   <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
@@ -187,7 +187,7 @@ export const Contact = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-2 px-3.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-850 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:text-indigo-650 dark:hover:text-indigo-400 transition-colors shadow-sm"
+                  className="flex items-center gap-2 py-2 px-3.5 rounded-xl text-xs font-bold bg-white hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-white transition-colors shadow-sm cursor-pointer"
                   aria-label={`${link.platform} Profile`}
                   title={`${link.platform} - ${link.label}`}
                 >
@@ -202,26 +202,26 @@ export const Contact = () => {
           <div className="lg:col-span-7 w-full">
             <form
               onSubmit={handleSendEmail}
-              className="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-250/60 dark:border-slate-850/60 shadow-sm text-left space-y-4"
+              className="p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 shadow-sm text-left space-y-4"
             >
               {/* Success Notification */}
               {success && (
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/50 text-emerald-800 dark:text-emerald-400">
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
                   <div className="text-sm font-medium">
                     <p className="font-bold">Message sent successfully!</p>
-                    <p className="mt-0.5 text-xs text-emerald-700 dark:text-emerald-500">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                    <p className="mt-0.5 text-xs text-emerald-700 dark:text-emerald-400">Thank you for reaching out. I'll get back to you as soon as possible.</p>
                   </div>
                 </div>
               )}
 
               {/* Error Notification */}
               {serverError && (
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/50 text-red-800 dark:text-red-400">
-                  <AlertTriangle className="h-5 w-5 text-red-650 dark:text-red-450 flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-red-50 dark:bg-red-950/30 border border-red-300 dark:border-red-800 text-red-800 dark:text-red-300">
+                  <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
                   <div className="text-sm font-medium">
                     <p className="font-bold">Failed to send message</p>
-                    <p className="mt-0.5 text-xs text-red-700 dark:text-red-500">{serverError}</p>
+                    <p className="mt-0.5 text-xs text-red-700 dark:text-red-400">{serverError}</p>
                   </div>
                 </div>
               )}
@@ -231,7 +231,7 @@ export const Contact = () => {
                 <div className="space-y-1">
                   <label
                     htmlFor="name"
-                    className="text-xs font-bold text-slate-500 dark:text-slate-450 uppercase tracking-wider"
+                    className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider"
                   >
                     Your Name
                   </label>
@@ -242,15 +242,15 @@ export const Contact = () => {
                     value={form.name}
                     onChange={handleInputChange}
                     disabled={loading}
-                    className={`w-full p-3 rounded-xl border bg-slate-50/50 dark:bg-slate-950 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 ${
+                    className={`w-full p-3 rounded-xl border bg-slate-50 hover:bg-slate-100/60 dark:bg-slate-950 dark:hover:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:bg-white dark:focus:bg-slate-950 ${
                       errors.name
-                        ? "border-red-500 dark:border-red-600 focus:border-red-500"
-                        : "border-slate-200 dark:border-slate-800 focus:border-indigo-500"
+                        ? "border-red-500 dark:border-red-500 focus:border-red-500"
+                        : "border-slate-300 dark:border-slate-700 focus:border-indigo-600 dark:focus:border-indigo-400"
                     } disabled:opacity-50`}
                     placeholder="Jane Doe"
                   />
                   {errors.name && (
-                    <p className="text-2xs text-red-505 dark:text-red-400 font-medium">
+                    <p className="text-2xs text-red-600 dark:text-red-400 font-medium">
                       {errors.name}
                     </p>
                   )}
@@ -260,7 +260,7 @@ export const Contact = () => {
                 <div className="space-y-1">
                   <label
                     htmlFor="email"
-                    className="text-xs font-bold text-slate-500 dark:text-slate-455 uppercase tracking-wider"
+                    className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider"
                   >
                     Your Email
                   </label>
@@ -271,15 +271,15 @@ export const Contact = () => {
                     value={form.email}
                     onChange={handleInputChange}
                     disabled={loading}
-                    className={`w-full p-3 rounded-xl border bg-slate-50/50 dark:bg-slate-955 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 ${
+                    className={`w-full p-3 rounded-xl border bg-slate-50 hover:bg-slate-100/60 dark:bg-slate-950 dark:hover:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:bg-white dark:focus:bg-slate-950 ${
                       errors.email
-                        ? "border-red-500 dark:border-red-600 focus:border-red-500"
-                        : "border-slate-200 dark:border-slate-800 focus:border-indigo-500"
+                        ? "border-red-500 dark:border-red-500 focus:border-red-500"
+                        : "border-slate-300 dark:border-slate-700 focus:border-indigo-600 dark:focus:border-indigo-400"
                     } disabled:opacity-50`}
                     placeholder="jane@example.com"
                   />
                   {errors.email && (
-                    <p className="text-2xs text-red-505 dark:text-red-400 font-medium">
+                    <p className="text-2xs text-red-600 dark:text-red-400 font-medium">
                       {errors.email}
                     </p>
                   )}
@@ -290,7 +290,7 @@ export const Contact = () => {
               <div className="space-y-1">
                 <label
                   htmlFor="subject"
-                  className="text-xs font-bold text-slate-500 dark:text-slate-455 uppercase tracking-wider"
+                  className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider"
                 >
                   Subject
                 </label>
@@ -301,15 +301,15 @@ export const Contact = () => {
                   value={form.subject}
                   onChange={handleInputChange}
                   disabled={loading}
-                  className={`w-full p-3 rounded-xl border bg-slate-50/50 dark:bg-slate-950 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 ${
+                  className={`w-full p-3 rounded-xl border bg-slate-50 hover:bg-slate-100/60 dark:bg-slate-950 dark:hover:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:bg-white dark:focus:bg-slate-950 ${
                     errors.subject
-                      ? "border-red-500 dark:border-red-600 focus:border-red-500"
-                      : "border-slate-200 dark:border-slate-800 focus:border-indigo-500"
+                      ? "border-red-500 dark:border-red-500 focus:border-red-500"
+                      : "border-slate-300 dark:border-slate-700 focus:border-indigo-600 dark:focus:border-indigo-400"
                   } disabled:opacity-50`}
                   placeholder="Opportunity for internship / collaboration"
                 />
                 {errors.subject && (
-                  <p className="text-2xs text-red-505 dark:text-red-400 font-medium">
+                  <p className="text-2xs text-red-600 dark:text-red-400 font-medium">
                     {errors.subject}
                   </p>
                 )}
@@ -319,7 +319,7 @@ export const Contact = () => {
               <div className="space-y-1">
                 <label
                   htmlFor="message"
-                  className="text-xs font-bold text-slate-500 dark:text-slate-455 uppercase tracking-wider"
+                  className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider"
                 >
                   Message
                 </label>
@@ -330,15 +330,15 @@ export const Contact = () => {
                   value={form.message}
                   onChange={handleInputChange}
                   disabled={loading}
-                  className={`w-full p-3 rounded-xl border bg-slate-50/50 dark:bg-slate-950 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 ${
+                  className={`w-full p-3 rounded-xl border bg-slate-50 hover:bg-slate-100/60 dark:bg-slate-950 dark:hover:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-sm transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:bg-white dark:focus:bg-slate-950 ${
                     errors.message
-                      ? "border-red-500 dark:border-red-600 focus:border-red-500"
-                      : "border-slate-200 dark:border-slate-800 focus:border-indigo-500"
+                      ? "border-red-500 dark:border-red-500 focus:border-red-500"
+                      : "border-slate-300 dark:border-slate-700 focus:border-indigo-600 dark:focus:border-indigo-400"
                   } disabled:opacity-50`}
                   placeholder="Tell me about your project..."
                 />
                 {errors.message && (
-                  <p className="text-2xs text-red-505 dark:text-red-400 font-medium">
+                  <p className="text-2xs text-red-600 dark:text-red-400 font-medium">
                     {errors.message}
                   </p>
                 )}
@@ -348,7 +348,7 @@ export const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl font-semibold text-white bg-indigo-650 hover:bg-indigo-700 dark:bg-indigo-550 dark:hover:bg-indigo-600 transition-colors shadow-md shadow-indigo-100 dark:shadow-none text-sm cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
+                className="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl font-bold text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-600 dark:hover:bg-indigo-500 transition-colors shadow-md shadow-indigo-500/25 text-sm cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
               >
                 <Send className="h-4 w-4" />
                 {loading ? "Sending..." : "Send Message"}

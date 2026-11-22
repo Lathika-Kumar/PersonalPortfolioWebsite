@@ -15,11 +15,11 @@ export const Certifications: React.FC = () => {
           {certifications.map((cert, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-250/60 dark:border-slate-850/60 shadow-sm text-left hover:border-indigo-400 dark:hover:border-indigo-900 transition-all duration-300 flex flex-col justify-between"
+              className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 shadow-xs text-left hover:border-indigo-500 dark:hover:border-indigo-600 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="flex items-start gap-4 mb-4">
                 {/* Certificate Icon */}
-                <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-slate-850 text-indigo-650 dark:text-indigo-400">
+                <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-slate-700">
                   <Award className="h-6 w-6" />
                 </div>
                 <div className="space-y-1">
@@ -33,8 +33,8 @@ export const Certifications: React.FC = () => {
               </div>
 
               {/* Status Badge */}
-              <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-105/50 dark:border-slate-850/60">
-                <span className="inline-flex items-center gap-1 text-2xs font-bold text-emerald-600 dark:text-emerald-450 uppercase tracking-widest">
+              <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                <span className="inline-flex items-center gap-1 text-2xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
                   <ShieldCheck className="h-3.5 w-3.5" />
                   Verified
                 </span>
@@ -43,7 +43,7 @@ export const Certifications: React.FC = () => {
                     href={cert.credentialUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-semibold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 flex items-center gap-0.5 transition-colors"
+                    className="text-xs font-semibold text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 flex items-center gap-0.5 transition-colors"
                   >
                     Verify
                     <ChevronRight className="h-3 w-3" />

@@ -29,20 +29,20 @@ export const achievements: Achievement[] = [
     organizer: "School of Computer Science Engineering and Information Systems, VIT, Vellore",
     institution: "Karpagam College of Engineering",
     date: "October 8–9, 2026",
-    description: "Secured First Place in the prestigious VIT Mapathon competition, an intensive geospatial mapping challenge conducted during SustainAI 2026 at Vellore Institute of Technology. Recognized for technical excellence, geospatial data modeling, and practical problem-solving aligned with sustainability objectives.",
+    description: "Secured First Place in the prestigious VIT Mapathon competition, an intensive geospatial mapping challenge conducted during SustainAI 2026 at Vellore Institute of Technology. Developed an agricultural mapping and satellite-based crop analysis system to distinguish paddy and banana cultivation zones using spectral vegetation indices (NDVI, NDWI) and radar polarization features.",
     highlights: [
       "Secured 1st Place in a highly competitive inter-institutional technical challenge at VIT, Vellore.",
-      "Applied advanced geospatial technology and spatial analytics to model real-world sustainability solutions.",
-      "Demonstrated strong analytical thinking, algorithmic problem solving, and end-to-end technical implementation.",
-      "Recognized by academic and industry judges at the SustainAI 2026 Industry-Academia Conclave."
+      "Utilized satellite imagery and geospatial data to distinguish paddy and banana cultivation fields using NDVI & NDWI indices.",
+      "Investigated VV/VH radar polarization features for crop classification and agricultural monitoring.",
+      "Recognized for technical excellence, analytical problem solving, and sustainable real-world impact by academic and industry juries."
     ],
     tags: [
-      "Geospatial Technology",
-      "Spatial Data Mapping",
-      "Analytical Thinking",
+      "Geospatial Mapping",
+      "Satellite Imagery",
+      "Google Earth Engine",
+      "NDVI & NDWI Indices",
       "Problem Solving",
-      "Technical Implementation",
-      "Sustainable AI"
+      "Sustainable Agriculture"
     ],
     certificateUrl: "/achievements/vit-mapathon-certificate.png",
     posterUrl: "/achievements/vit-mapathon-poster.png",
@@ -62,8 +62,8 @@ export const achievements: Achievement[] = [
     description: "Earned the official 50 Days Coding Streak Badge on LeetCode for maintaining consistent algorithmic problem solving and daily practice in Data Structures and Algorithms across Java and Python3.",
     highlights: [
       "Maintained a continuous daily problem-solving streak across fundamental and advanced DSA topics.",
-      "Solved 190+ algorithmic challenges spanning Dynamic Programming, Graphs, Two Pointers, and Binary Search.",
-      "Achieved consistent submissions in Java (130 solved) and Python3 (63 solved)."
+      "Solved 200+ algorithmic challenges spanning Dynamic Programming, Graphs, Two Pointers, and Binary Search.",
+      "Achieved consistent submissions in Java (130+ solved) and Python3 (63+ solved)."
     ],
     tags: [
       "Data Structures & Algorithms",

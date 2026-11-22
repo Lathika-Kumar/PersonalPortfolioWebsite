@@ -30,15 +30,15 @@ export const Skills: React.FC = () => {
         <SectionHeading title="Technical Skills" subtitle="Expertise" />
 
         {/* Tab Controls for Categories */}
-        <div className="flex flex-wrap gap-2 mb-8 justify-start border-b border-slate-200/60 dark:border-slate-850/60 pb-4">
+        <div className="flex flex-wrap gap-2.5 mb-8 justify-start border-b border-slate-200 dark:border-slate-800 pb-4">
           {skillCategories.map((category, idx) => (
             <button
               key={idx}
               onClick={() => setActiveTab(idx)}
               className={`flex items-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold transition-all duration-200 cursor-pointer ${
                 activeTab === idx
-                  ? "bg-indigo-650 text-white shadow-md shadow-indigo-200 dark:shadow-none dark:bg-indigo-600"
-                  : "text-slate-650 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-900 dark:hover:text-white"
+                  ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/25 dark:bg-indigo-600 dark:text-white"
+                  : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 border border-slate-300 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white dark:border-slate-800"
               }`}
             >
               {getCategoryIcon(idx)}
@@ -52,18 +52,18 @@ export const Skills: React.FC = () => {
           {skillCategories[activeTab].skills.map((skill, index) => (
             <div
               key={index}
-              className="flex items-center justify-between p-4 rounded-xl border border-slate-200/60 bg-slate-50 dark:border-slate-850/60 dark:bg-slate-900/60 hover:border-indigo-400 dark:hover:border-indigo-900 transition-all duration-200 group text-left shadow-sm"
+              className="flex items-center justify-between p-4 rounded-xl border border-slate-300 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/60 hover:border-indigo-500 dark:hover:border-indigo-500 transition-all duration-200 group text-left shadow-xs"
             >
-              <span className="font-semibold text-slate-800 dark:text-slate-200 text-sm">
+              <span className="font-semibold text-slate-900 dark:text-slate-100 text-sm">
                 {skill.name}
               </span>
-              <div className="h-1.5 w-1.5 rounded-full bg-slate-300 dark:bg-slate-755 group-hover:bg-indigo-500 transition-colors"></div>
+              <div className="h-2 w-2 rounded-full bg-slate-400 dark:bg-slate-600 group-hover:bg-indigo-600 dark:group-hover:bg-indigo-400 transition-colors"></div>
             </div>
           ))}
         </div>
 
         {/* Small Note */}
-        <div className="mt-8 text-left text-xs text-slate-450 dark:text-slate-500">
+        <div className="mt-8 text-left text-xs text-slate-500 dark:text-slate-400">
           * Skills verified through course curricula, academic evaluations, or active projects.
         </div>
       </div>
